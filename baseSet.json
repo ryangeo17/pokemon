@@ -1,0 +1,88 @@
+{
+    "sets": {
+        "baseSet": {
+            "name": "Base Set",
+            "code": "BS",
+            "releaseDate": "1999-01-09",
+            "totalCards": 102,
+            "symbol": "BS",
+
+            "cards": [
+                {
+                    "name": "Bulbasaur",
+                    "number": "001",
+                    "rarity": "Common",
+                    "type": "Grass"
+                },
+                {
+                    "name": "Charmander",
+                    "number": "004",
+                    "rarity": "Common",
+                    "type": "Fire"
+                },
+                {
+                    "name": "Squirtle",
+                    "number": "007",
+                    "rarity": "Common",
+                    "type": "Water"
+                }
+            ]
+        },
+        "jungle": {
+            "name": "Jungle",
+            "code": "JU",
+            "releaseDate": "1999-06-16",
+            "totalCards": 64,
+            "symbol": "JU",
+            "cards": [
+                {
+                    "name": "Pikachu",
+                    "number": "025",
+                    "rarity": "Common",
+                    "type": "Electric"
+                },
+                {
+                    "name": "Eevee",
+                    "number": "133",
+                    "rarity": "Common",
+                    "type": "Normal"
+                },
+                {
+                    "name": "Snorlax",
+                    "number": "143",
+                    "rarity": "Rare",
+                    "type": "Normal"
+                }
+            ]
+        },
+
+        "fossil": {
+            "name": "Fossil",
+            "code": "FO",
+            "releaseDate": "1999-10-10",
+            "totalCards": 62,
+            "symbol": "FO",
+            "cards": [
+                {
+                    "name": "Kabuto",
+                    "number": "140",
+                    "rarity": "Common",
+                    "type": "Rock"
+                },
+                {
+                    "name": "Aerodactyl",
+                    "number": "142",
+                    "rarity": "Rare",
+                    "type": "Rock"
+                },
+                {
+                    "name": "Articuno",
+                    "number": "144",
+                    "rarity": "Rare Holo",
+                    "type": "Water"
+                }
+            ]
+        }
+    
+    }
+}
