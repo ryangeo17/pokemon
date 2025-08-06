@@ -10,21 +10,24 @@
             "cards": [
                 {
                     "name": "Bulbasaur",
-                    "number": "001",
+                    "number": "044",
                     "rarity": "Common",
-                    "type": "Grass"
+                    "type": "Grass",
+                    "img": "1-044.jpg"
                 },
                 {
                     "name": "Charmander",
-                    "number": "004",
+                    "number": "046",
                     "rarity": "Common",
-                    "type": "Fire"
+                    "type": "Fire",
+                    "img": "1-046.jpg"
                 },
                 {
                     "name": "Squirtle",
-                    "number": "007",
+                    "number": "063",
                     "rarity": "Common",
-                    "type": "Water"
+                    "type": "Water",
+                    "img": "1-063.jpg"
                 }
             ]
         },
