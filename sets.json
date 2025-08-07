@@ -5,6 +5,7 @@
             "releaseDate": "1999-01-09",
             "totalCards": 102,
             "symbol": "BS",
+            "img": "images/base/logo.png",
 
             "cards": [
                 {
@@ -12,7 +13,7 @@
                     "number": "044",
                     "rarity": "Common",
                     "type": "Grass",
-                    "img": "images/1-044.jpg",
+                    "img": "images/base/1-044.jpg",
                     "card type": "Pokémon"
                 },
                 {
@@ -20,7 +21,7 @@
                     "number": "046",
                     "rarity": "Common",
                     "type": "Fire",
-                    "img": "images/1-046.jpg",
+                    "img": "images/base/1-046.jpg",
                     "card type": "Pokémon"
                 },
                 {
@@ -28,7 +29,7 @@
                     "number": "063",
                     "rarity": "Common",
                     "type": "Water",
-                    "img": "images/1-063.jpg",
+                    "img": "images/base/1-063.jpg",
                     "card type": "Pokémon"
                 }
             ]
@@ -39,6 +40,7 @@
             "releaseDate": "1999-06-16",
             "totalCards": 64,
             "symbol": "JU",
+            "img": "images/jungle/logo.png",
             "cards": [
                 {
                     "name": "Pikachu",
@@ -46,7 +48,7 @@
                     "rarity": "Common",
                     "type": "Electric",
                     "card type": "Pokémon",
-                    "img": "images/2-060.jpg"
+                    "img": "images/jungle/2-060.jpg"
                 },
                 {
                     "name": "Eevee",
@@ -54,7 +56,7 @@
                     "rarity": "Common",
                     "type": "Normal",
                     "card type": "Pokémon",
-                    "img": "images/2-051.png"
+                    "img": "images/jungle/2-051.png"
                 },
                 {
                     "name": "Snorlax",
@@ -62,7 +64,7 @@
                     "rarity": "Rare",
                     "type": "Normal",
                     "card type": "Pokémon",
-                    "img": "images/2-011.jpg"
+                    "img": "images/jungle/2-011.jpg"
                 }
             ]
         },
@@ -73,6 +75,7 @@
             "releaseDate": "1999-10-10",
             "totalCards": 62,
             "symbol": "FO",
+            "img": "images/fossil/logo.png",
             "cards": [
                 {
                     "name": "Kabuto",
@@ -80,7 +83,7 @@
                     "rarity": "Common",
                     "type": "Rock",
                     "card type": "Pokémon",
-                    "img": "images/3-050.jpg"
+                    "img": "images/fossil/3-050.jpg"
                 },
                 {
                     "name": "Aerodactyl",
@@ -88,7 +91,7 @@
                     "rarity": "Rare",
                     "card type": "Pokémon",
                     "type": "Rock",
-                    "img": "images/3-001.jpeg"
+                    "img": "images/fossil/3-001.jpeg"
                 },
                 {
                     "name": "Articuno",
@@ -96,7 +99,7 @@
                     "rarity": "Rare Holo",
                     "type": "Water",
                     "card type": "Pokémon",
-                    "img": "images/3-002.jpg"
+                    "img": "images/fossil/3-002.jpg"
                 }
             ]
         }

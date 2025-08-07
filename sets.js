@@ -1,5 +1,5 @@
 
-function populateCards(data) {
+function populateSets(data) {
     
 
     for (const setName in data) {
@@ -63,7 +63,7 @@ function populateCards(data) {
 fetch('baseSet.json')
     .then(response => response.json())
     .then(data => {
-        populateCards(data);
+        populateSets(data);
     })
     .catch(error => {
         console.error('Error fetching JSON:', error);
