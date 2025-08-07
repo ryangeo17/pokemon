@@ -1,5 +1,4 @@
-{
-    "sets": {
+    {
         "baseSet": {
             "name": "Base Set",
             "code": "BS",
@@ -13,21 +12,24 @@
                     "number": "044",
                     "rarity": "Common",
                     "type": "Grass",
-                    "img": "1-044.jpg"
+                    "img": "images/1-044.jpg",
+                    "card type": "Pokémon"
                 },
                 {
                     "name": "Charmander",
                     "number": "046",
                     "rarity": "Common",
                     "type": "Fire",
-                    "img": "1-046.jpg"
+                    "img": "images/1-046.jpg",
+                    "card type": "Pokémon"
                 },
                 {
                     "name": "Squirtle",
                     "number": "063",
                     "rarity": "Common",
                     "type": "Water",
-                    "img": "1-063.jpg"
+                    "img": "images/1-063.jpg",
+                    "card type": "Pokémon"
                 }
             ]
         },
@@ -40,21 +42,27 @@
             "cards": [
                 {
                     "name": "Pikachu",
-                    "number": "025",
+                    "number": "060",
                     "rarity": "Common",
-                    "type": "Electric"
+                    "type": "Electric",
+                    "card type": "Pokémon",
+                    "img": "images/2-060.jpg"
                 },
                 {
                     "name": "Eevee",
-                    "number": "133",
+                    "number": "051",
                     "rarity": "Common",
-                    "type": "Normal"
+                    "type": "Normal",
+                    "card type": "Pokémon",
+                    "img": "images/2-051.png"
                 },
                 {
                     "name": "Snorlax",
-                    "number": "143",
+                    "number": "011",
                     "rarity": "Rare",
-                    "type": "Normal"
+                    "type": "Normal",
+                    "card type": "Pokémon",
+                    "img": "images/2-011.jpg"
                 }
             ]
         },
@@ -68,24 +76,29 @@
             "cards": [
                 {
                     "name": "Kabuto",
-                    "number": "140",
+                    "number": "050",
                     "rarity": "Common",
-                    "type": "Rock"
+                    "type": "Rock",
+                    "card type": "Pokémon",
+                    "img": "images/3-050.jpg"
                 },
                 {
                     "name": "Aerodactyl",
-                    "number": "142",
+                    "number": "001",
                     "rarity": "Rare",
-                    "type": "Rock"
+                    "card type": "Pokémon",
+                    "type": "Rock",
+                    "img": "images/3-001.jpeg"
                 },
                 {
                     "name": "Articuno",
-                    "number": "144",
+                    "number": "002",
                     "rarity": "Rare Holo",
-                    "type": "Water"
+                    "type": "Water",
+                    "card type": "Pokémon",
+                    "img": "images/3-002.jpg"
                 }
             ]
         }
-    
+
     }
-}
