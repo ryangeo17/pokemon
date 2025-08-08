@@ -43,6 +43,12 @@ function populateCards(data) {
                 cardImage.style.width = '250px';
                 cardImage.style.height = 'auto'; // Maintain aspect ratio
                 cardImage.style.flex = '1 1 auto'; // Set image width to 100% of the card
+                cardImage.addEventListener('mouseover', () => {
+                    cardImage.style.opacity = '0.5'; // Change opacity on hover
+                });
+                cardImage.addEventListener('mouseout', () => {
+                    cardImage.style.opacity = '1'; // Reset opacity when not hovering
+                });
             }
 
             const cardElement = document.createElement('div');
