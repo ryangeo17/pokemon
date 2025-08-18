@@ -49,6 +49,7 @@ function populateCards(data) {
                 cardImage.addEventListener('mouseout', () => {
                     cardImage.style.opacity = '1'; // Reset opacity when not hovering
                 });
+                
             }
 
             const cardElement = document.createElement('div');

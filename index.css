@@ -1,0 +1,177 @@
+.heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    flex-direction: row;
+} 
+.heading-container a {
+    width: 100px;
+    height: auto;
+    flex: 1 1 auto;
+    text-align: center;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+}
+.heading-container a:hover {
+    color: #ffcc00;
+}
+
+
+.heading-container img {
+    width: 150px;
+    height: auto;
+    margin: 20px;
+    flex: 1 1 auto;
+}
+.heading-container img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.heading-container p {
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    margin: 5px;
+    flex: 1 1 auto;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.displayContainer {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.displayContainer img {
+    width: 100%;
+  /* Adjust position to crop a specific area */
+  margin-top: -200px; /* Example: move image up by 20px */
+  margin-left: 0px; /* Example: move image left by 30px */
+}
+.header h1{
+    margin: 20px;
+    font-weight: 800;
+    font-size: 3em;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.header p{
+    margin: 20px;
+    margin-bottom:40px;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.div1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  background-color: #181818;
+}
+.div2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:row;
+  background-color: #ffffff;
+}
+.textContainer1 {
+  padding: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-right: 200px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 0 0 auto;
+    width: 600px;
+    max-width: 100%;
+    font-weight: 400;
+
+}
+.textContainer1 h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.textContainer1 button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  font-style: italic;
+    border-radius: 5px;
+}
+.textContainer1 button:hover {
+  background-color: #e6b800;
+}
+
+.div1 img {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Adjust as needed */
+  max-height: 400px; /* Adjust as needed */
+  flex: 1 1 auto;
+  margin: 20px;
+}
+.textContainer2 {
+  padding: 20px;
+  color: #000000;
+  margin-top: 20px;
+  margin-left: 200px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 0 0 auto;
+    width: 600px;
+    max-width: 100%;
+    font-weight: 400;
+
+}
+.textContainer2 h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.textContainer2 button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  font-style: italic;
+    border-radius: 5px;
+}
+.textContainer2 button:hover {
+  background-color: #e6b800;
+  color:#000000;
+}
+
+.div2 img {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Adjust as needed */
+  max-height: 400px; /* Adjust as needed */
+  flex: 1 1 auto;
+  margin: 20px;
+}
+
+
