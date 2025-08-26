@@ -5,6 +5,11 @@ function populateSets(data) {
     document.body.appendChild(container);
     container.style.display = 'flex';  
     container.style.flexDirection = 'row';
+    container.style.alignItems = 'center';
+    container.style.justifyContent = 'center';
+    container.style.margin = '50px'; // Add margin around the container
+    container.style.flexWrap = 'wrap'; // Allow items to wrap to the next line if necessary
+    container.style.gap = '50px'; // Add space between items
 
     for (const setName in data) {
 
@@ -20,6 +25,7 @@ function populateSets(data) {
         setContainer.style.display = 'flex';
         setContainer.style.flexDirection = 'column';
         setContainer.style.alignItems = 'center';
+        setContainer.style.justifyContent = 'center';
         setContainer.style.margin = '10px';
         setContainer.href = `${setName}.html`; // Link to the set page
         setContainer.style.cursor = 'pointer'; // Change cursor to pointer on hover
