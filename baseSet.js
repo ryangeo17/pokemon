@@ -1,9 +1,8 @@
 function populateCards(data) {
-    
 
-        const sets = data["baseSet"];
-        const cards = sets.cards;
-        console.log(`Set: ${"baseSet"}, Number of Cards: ${cards.length}`);
+        const setName = "baseSet";
+        const cards = data[setName].cards;
+        console.log(`Set: ${setName}, Number of Cards: ${cards.length}`);
         const setElement = document.createElement('h2');
         document.body.appendChild(setElement);
         setElement.style.textAlign = 'center';
@@ -49,11 +48,18 @@ function populateCards(data) {
                 cardImage.addEventListener('mouseout', () => {
                     cardImage.style.opacity = '1'; // Reset opacity when not hovering
                 });
+                cardImage.addEventListener('click', () => {
+                    const myCards= JSON.parse(localStorage.getItem('myCards')) || [];
+                    myCards.push(card);
+                    localStorage.setItem('myCards', JSON.stringify(myCards));
+                    alert(`${card.name} has been added to your collection!`);
+                });
             }
 
             const cardElement = document.createElement('div');
             cardElement.className = 'card';
             cardElement.textContent = `${card.name} - (${card.number})`;
+            cardElement.style.fontFamily = 'Roboto, sans-serif';
             cardElement.style.flex = '1 0 0px'; // Flex-grow, flex-shrink, flex-basis
             cardElement.style.margin = '10px';  
             cardContainer.appendChild(cardElement);
@@ -66,7 +72,7 @@ function populateCards(data) {
 
 
 
-fetch('sets.json')
+fetch('http://localhost:3000/cards')
     .then(response => response.json())
     .then(data => {
         populateCards(data);

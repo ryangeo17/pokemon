@@ -1,0 +1,107 @@
+ {
+        "baseSet": {
+            "name": "Base Set",
+            "code": "BS",
+            "releaseDate": "1999-01-09",
+            "totalCards": 102,
+            "symbol": "BS",
+            "img": "images/base/logo.png",
+
+            "cards": [
+                {
+                    "name": "Bulbasaur",
+                    "number": "044",
+                    "rarity": "Common",
+                    "type": "Grass",
+                    "img": "images/base/1-044.jpg",
+                    "card type": "Pokémon"
+                },
+                {
+                    "name": "Charmander",
+                    "number": "046",
+                    "rarity": "Common",
+                    "type": "Fire",
+                    "img": "images/base/1-046.jpg",
+                    "card type": "Pokémon"
+                },
+                {
+                    "name": "Squirtle",
+                    "number": "063",
+                    "rarity": "Common",
+                    "type": "Water",
+                    "img": "images/base/1-063.jpg",
+                    "card type": "Pokémon"
+                }
+            ]
+        },
+        "jungle": {
+            "name": "Jungle",
+            "code": "JU",
+            "releaseDate": "1999-06-16",
+            "totalCards": 64,
+            "symbol": "JU",
+            "img": "images/jungle/logo.png",
+            "cards": [
+                {
+                    "name": "Pikachu",
+                    "number": "060",
+                    "rarity": "Common",
+                    "type": "Electric",
+                    "card type": "Pokémon",
+                    "img": "images/jungle/2-060.jpg"
+                },
+                {
+                    "name": "Eevee",
+                    "number": "051",
+                    "rarity": "Common",
+                    "type": "Normal",
+                    "card type": "Pokémon",
+                    "img": "images/jungle/2-051.png"
+                },
+                {
+                    "name": "Snorlax",
+                    "number": "011",
+                    "rarity": "Rare",
+                    "type": "Normal",
+                    "card type": "Pokémon",
+                    "img": "images/jungle/2-011.jpg"
+                }
+            ]
+        },
+
+        "fossil": {
+            "name": "Fossil",
+            "code": "FO",
+            "releaseDate": "1999-10-10",
+            "totalCards": 62,
+            "symbol": "FO",
+            "img": "images/fossil/logo.png",
+            "cards": [
+                {
+                    "name": "Kabuto",
+                    "number": "050",
+                    "rarity": "Common",
+                    "type": "Rock",
+                    "card type": "Pokémon",
+                    "img": "images/fossil/3-050.jpg"
+                },
+                {
+                    "name": "Aerodactyl",
+                    "number": "001",
+                    "rarity": "Rare",
+                    "card type": "Pokémon",
+                    "type": "Rock",
+                    "img": "images/fossil/3-001.jpeg"
+                },
+                {
+                    "name": "Articuno",
+                    "number": "002",
+                    "rarity": "Rare Holo",
+                    "type": "Water",
+                    "card type": "Pokémon",
+                    "img": "images/fossil/3-002.jpg"
+                }
+            ]
+        }
+
+    }

@@ -1,9 +1,9 @@
 function populateCards(data) {
     
 
-        const sets = data["jungle"];
-        const cards = sets.cards;
-        console.log(`Set: ${"jungle"}, Number of Cards: ${cards.length}`);
+        const setName = "jungle";
+        const cards = data[setName].cards;
+        console.log(`Set: ${setName}, Number of Cards: ${cards.length}`);
         const setElement = document.createElement('h2');
         document.body.appendChild(setElement);
         setElement.style.textAlign = 'center';
