@@ -1,3 +1,29 @@
 [
-    
+  {
+    "name": "Squirtle",
+    "number": "063",
+    "rarity": "Common",
+    "type": "Water",
+    "img": "images/base/1-063.jpg",
+    "card type": "Pokémon",
+    "id": 1
+  },
+  {
+    "name": "Charmander",
+    "number": "046",
+    "rarity": "Common",
+    "type": "Fire",
+    "img": "images/base/1-046.jpg",
+    "card type": "Pokémon",
+    "id": 2
+  },
+  {
+    "name": "Bulbasaur",
+    "number": "044",
+    "rarity": "Common",
+    "type": "Grass",
+    "img": "images/base/1-044.jpg",
+    "card type": "Pokémon",
+    "id": 3
+  }
 ]

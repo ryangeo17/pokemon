@@ -1,14 +1,17 @@
 function populateCards(data) {
+        console.log(data);
+        console.log("test");
 
-        const setName = "baseSet";
-        const cards = data[setName].cards;
-        console.log(`Set: ${setName}, Number of Cards: ${cards.length}`);
         const setElement = document.createElement('h2');
+        const cards= data;
         document.body.appendChild(setElement);
         setElement.style.textAlign = 'center';
         setElement.className = 'set';
         setElement.style.fontWeight = 'bold';
         setElement.style.margin = '10px 0';
+
+        // red "X" button
+        
 
         const container= document.createElement('div');
         container.className = 'container';
@@ -21,9 +24,23 @@ function populateCards(data) {
         cardsContainer.style.flexWrap = 'wrap';
         cardsContainer.style.justifyContent = 'center';
         cardsContainer.style.flexDirection = 'row';
+        
         container.appendChild(cardsContainer);
+        
         cards.forEach(card => {
-            
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = '✖'; 
+            removeBtn.style.position = 'absolute';
+            removeBtn.style.top = '5px';
+            removeBtn.style.right = '5px';
+            removeBtn.style.background = 'red';
+            removeBtn.style.color = 'white';
+            removeBtn.style.border = 'none';
+            removeBtn.style.borderRadius = '50%';
+            removeBtn.style.width = '25px';
+            removeBtn.style.height = '25px';
+            removeBtn.style.cursor = 'pointer';
+            removeBtn.style.display = 'none'; // hidden by default
 
             const cardContainer = document.createElement('div');
             cardContainer.className = 'card-container';
@@ -31,6 +48,8 @@ function populateCards(data) {
             cardContainer.style.flexDirection = 'column';
             cardContainer.style.alignItems = 'center';
             cardContainer.style.margin = '10px';
+            cardContainer.style.position = 'relative';
+            cardContainer.appendChild(removeBtn);
             cardsContainer.appendChild(cardContainer);
 
             if (card.img) {
@@ -43,31 +62,12 @@ function populateCards(data) {
                 cardImage.style.height = 'auto'; // Maintain aspect ratio
                 cardImage.style.flex = '1 1 auto'; // Set image width to 100% of the card
                 cardImage.addEventListener('mouseover', () => {
-                    cardImage.style.opacity = '0.5'; // Change opacity on hover
+                    removeBtn.style.display = 'block'; // Show remove button on hover
                 });
                 cardImage.addEventListener('mouseout', () => {
-                    cardImage.style.opacity = '1'; // Reset opacity when not hovering
+                    removeBtn.style.display = 'none'; // Hide remove button when not hovering
                 });
-                cardImage.addEventListener('click', (event) => {
-                    console.log("clicked", event.target, event.target.tagName);
-                    event.preventDefault();
-                    event.stopPropagation();
-                    fetch('http://localhost:3000/myCards', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(card)
-                    })
-                    
-                    .then(res=>res.json())
-                    .then(savedCard=>{
-                        console.log("Card Added");
-                    })
-                    .catch(error => {
-                        console.error("Error adding card:");
-                    });
-                });
+                
             }
 
             const cardElement = document.createElement('div');
@@ -77,6 +77,24 @@ function populateCards(data) {
             cardElement.style.flex = '1 0 0px'; // Flex-grow, flex-shrink, flex-basis
             cardElement.style.margin = '10px';  
             cardContainer.appendChild(cardElement);
+            removeBtn.addEventListener('mouseover', () => { 
+                document.body.style.cursor = 'pointer';
+            });
+            removeBtn.addEventListener('mouseout', () => {
+                document.body.style.cursor = 'default';
+            });
+
+            removeBtn.addEventListener('click', () => {
+                fetch(`http://localhost:3000/myCards/${card.id}`, {
+                    method: 'DELETE',
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error("Failed to delete");
+                    // also remove from UI immediately:
+                    cardContainer.remove();
+                })
+                .catch(err => console.error(err));
+            });
                           
             
         });
@@ -86,7 +104,7 @@ function populateCards(data) {
 
 
 
-fetch('http://localhost:3000/cards')
+fetch('http://localhost:3000/myCards')
     .then(response => response.json())
     .then(data => {
         populateCards(data);

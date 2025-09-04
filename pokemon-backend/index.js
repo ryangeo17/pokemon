@@ -71,6 +71,51 @@ app.delete("/cards/:id", (req, res) => {
     res.status(200).json(deletedCard); // send back the deleted card for confirmation
 });
 
+
+//myCards
+//read the cards from a json file
+let myCards = JSON.parse(fs.readFileSync("myCards.json", "utf-8"));
+
+function saveMyCardsToFile() {
+    fs.writeFileSync("myCards.json", JSON.stringify(myCards, null, 2));
+}
+
+//CRUD operations for cards;
+app.get("/myCards", (req, res) => {
+    res.json(myCards);
+});
+
+app.get("/myCards/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const card = myCards.find(c => c.id === id);
+    if (!card) {
+        return res.status(404).send("Card not found");
+    }
+    res.json(card);
+});
+let nextMyId = 1;
+
+app.post("/myCards", (req, res) => {
+    const newCard = req.body;
+    newCard.id = nextMyId++;
+    myCards.push(newCard);
+    res.status(201).json(newCard);
+    saveMyCardsToFile();
+});
+
+app.delete("/myCards/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    const cardIndex = myCards.findIndex(c => c.id === id);
+
+    if (cardIndex === -1) {
+        return res.status(404).send("Card not found");
+    }
+
+    const deletedCard = myCards.splice(cardIndex, 1)[0]; // grab the object itself
+    saveMyCardsToFile(); // 👈 persist changes to file
+
+    res.status(200).json(deletedCard); // send back the deleted card for confirmation
+});
 //start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
