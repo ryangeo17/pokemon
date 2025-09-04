@@ -48,6 +48,26 @@ function populateCards(data) {
                 cardImage.addEventListener('mouseout', () => {
                     cardImage.style.opacity = '1'; // Reset opacity when not hovering
                 });
+                cardImage.addEventListener('click', (event) => {
+                    console.log("clicked", event.target, event.target.tagName);
+                    event.preventDefault();
+                    event.stopPropagation();
+                    fetch('http://localhost:3000/myCards', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(card)
+                    })
+                    
+                    .then(res=>res.json())
+                    .then(savedCard=>{
+                        console.log("Card Added");
+                    })
+                    .catch(error => {
+                        console.error("Error adding card:");
+                    });
+                });
             }
 
             const cardElement = document.createElement('div');

@@ -67,7 +67,6 @@ function populateCards(data) {
                 cardImage.addEventListener('mouseout', () => {
                     removeBtn.style.display = 'none'; // Hide remove button when not hovering
                 });
-                
             }
 
             const cardElement = document.createElement('div');

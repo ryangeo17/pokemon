@@ -9,15 +9,6 @@
     "id": 1
   },
   {
-    "name": "Charmander",
-    "number": "046",
-    "rarity": "Common",
-    "type": "Fire",
-    "img": "images/base/1-046.jpg",
-    "card type": "Pokémon",
-    "id": 2
-  },
-  {
     "name": "Bulbasaur",
     "number": "044",
     "rarity": "Common",
@@ -25,5 +16,23 @@
     "img": "images/base/1-044.jpg",
     "card type": "Pokémon",
     "id": 3
+  },
+  {
+    "name": "Squirtle",
+    "number": "063",
+    "rarity": "Common",
+    "type": "Water",
+    "img": "images/base/1-063.jpg",
+    "card type": "Pokémon",
+    "id": 8
+  },
+  {
+    "name": "Eevee",
+    "number": "051",
+    "rarity": "Common",
+    "type": "Normal",
+    "card type": "Pokémon",
+    "img": "images/jungle/2-051.png",
+    "id": 9
   }
 ]
