@@ -1,38 +1,20 @@
 [
   {
-    "name": "Squirtle",
-    "number": "063",
-    "rarity": "Common",
+    "name": "Articuno",
+    "number": "002",
+    "rarity": "Rare Holo",
     "type": "Water",
-    "img": "images/base/1-063.jpg",
     "card type": "Pokémon",
-    "id": 1
+    "img": "images/fossil/3-002.jpg",
+    "id": 20
   },
   {
-    "name": "Bulbasaur",
-    "number": "044",
+    "name": "Kabuto",
+    "number": "050",
     "rarity": "Common",
-    "type": "Grass",
-    "img": "images/base/1-044.jpg",
+    "type": "Rock",
     "card type": "Pokémon",
-    "id": 3
-  },
-  {
-    "name": "Squirtle",
-    "number": "063",
-    "rarity": "Common",
-    "type": "Water",
-    "img": "images/base/1-063.jpg",
-    "card type": "Pokémon",
-    "id": 8
-  },
-  {
-    "name": "Eevee",
-    "number": "051",
-    "rarity": "Common",
-    "type": "Normal",
-    "card type": "Pokémon",
-    "img": "images/jungle/2-051.png",
-    "id": 9
+    "img": "images/fossil/3-050.jpg",
+    "id": 22
   }
 ]

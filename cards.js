@@ -11,7 +11,46 @@ function populateCards(data) {
         setElement.style.margin = '10px 0';
 
         // red "X" button
-        
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = '✖';
+        removeBtn.style.position = 'absolute';
+        removeBtn.style.top = '5px';
+        removeBtn.style.right = '5px';
+        removeBtn.style.background = 'red';
+        removeBtn.style.color = 'white';
+        removeBtn.style.border = 'none';
+        removeBtn.style.borderRadius = '50%';
+        removeBtn.style.width = '25px';
+        removeBtn.style.height = '25px';
+        removeBtn.style.cursor = 'pointer';
+        removeBtn.style.display = 'none'; // hidden by default
+
+        //sort cards by set and number
+        const sortIDbtn = document.createElement('button');
+        sortIDbtn.textContent = 'Sort by Set & Number';
+        sortIDbtn.style.margin = '10px';
+        sortIDbtn.style.padding = '10px';
+        sortIDbtn.style.fontSize = '16px';
+        sortIDbtn.style.cursor = 'pointer';
+        sortIDbtn.addEventListener('click', () => {
+            const setsArray= Object.values(cards);
+            for (let i=0; i<setsArray.length-1; i++) {
+                for (let j=0; j<setsArray.length-i-1; j++) {
+                    if (setsArray[j].id>setsArray[j+1].id) {
+                        [setsArray[j], setsArray[j+1]] = [setsArray[j+1], setsArray[j]];
+                    }
+                }
+            }
+            for (let i=0; i<setsArray.length; i++) {
+                for (let j=0; j<setsArray[i].cards.length-1; j++) {
+                    for (let k=0; k<setsArray[i].cards.length-j-1; k++) {
+                        if (parseInt(setsArray[i].cards[k].number) > parseInt(setsArray[i].cards[k+1].number)) {
+                            [setsArray[i].cards[k], setsArray[i].cards[k+1]] = [setsArray[i].cards[k+1], setsArray[i].cards[k]];
+                        }
+                    }
+                }
+            }
+        });
 
         const container= document.createElement('div');
         container.className = 'container';
@@ -26,8 +65,11 @@ function populateCards(data) {
         cardsContainer.style.flexDirection = 'row';
         
         container.appendChild(cardsContainer);
+
+        
         
         cards.forEach(card => {
+            //creates the remove button for each card
             const removeBtn = document.createElement('button');
             removeBtn.textContent = '✖'; 
             removeBtn.style.position = 'absolute';
@@ -42,6 +84,8 @@ function populateCards(data) {
             removeBtn.style.cursor = 'pointer';
             removeBtn.style.display = 'none'; // hidden by default
 
+
+            //creates the card container for each card
             const cardContainer = document.createElement('div');
             cardContainer.className = 'card-container';
             cardContainer.style.display = 'flex';
@@ -52,6 +96,7 @@ function populateCards(data) {
             cardContainer.appendChild(removeBtn);
             cardsContainer.appendChild(cardContainer);
 
+            //adds card image
             if (card.img) {
                 const cardImage = document.createElement('img');
                 cardImage.className = 'card-image';
@@ -65,10 +110,14 @@ function populateCards(data) {
                     removeBtn.style.display = 'block'; // Show remove button on hover
                 });
                 cardImage.addEventListener('mouseout', () => {
-                    removeBtn.style.display = 'none'; // Hide remove button when not hovering
+                    setTimeout(() => {
+                        removeBtn.style.display = 'none'; // Hide remove button when not hovering
+                    }, 350);
                 });
+
             }
 
+            //adds card name and number
             const cardElement = document.createElement('div');
             cardElement.className = 'card';
             cardElement.textContent = `${card.name} - (${card.number})`;

@@ -87,7 +87,7 @@ function populateCards(data) {
 
 
 
-fetch('sets.json')
+fetch('http://localhost:3000/cards')
     .then(response => response.json())
     .then(data => {
         populateCards(data);
